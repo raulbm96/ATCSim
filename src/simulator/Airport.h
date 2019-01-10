@@ -61,6 +61,7 @@ public:
 	virtual int getPoints(const Ice::Current&);
 
   void book_landing() {any_landing_ = true;}
+	void unbook_landing() {any_landing_ = false;}
   bool is_booked_landing() { return any_landing_;}
 
 private:
@@ -91,7 +92,7 @@ private:
 
     pthread_mutex_t mutex;
 
-	float acum_; 
+	float acum_;
 
   bool any_landing_;
 
